@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "as_of": "2025-01-31T23:59:59Z",
+  "published_at": "2025-01-29T12:00:00Z",
+  "sessions": [
+    "2025-01-28",
+    "2025-01-29",
+    "2025-01-30"
+  ],
+  "companies": [
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "closes": [
+        "100",
+        "102",
+        "101"
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "name": "JPMorgan Chase",
+      "closes": [
+        "100",
+        "101",
+        "103"
+      ]
+    },
+    {
+      "symbol": "JNJ",
+      "name": "Johnson & Johnson",
+      "closes": [
+        "100",
+        "99",
+        "101"
+      ]
+    },
+    {
+      "symbol": "XOM",
+      "name": "Exxon Mobil",
+      "closes": [
+        "100",
+        "103",
+        "100"
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "name": "Walmart",
+      "closes": [
+        "100",
+        "102",
+        "104"
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "closes": [
+        "100",
+        "102",
+        "101"
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "closes": [
+        "100",
+        "101",
+        "103"
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet",
+      "closes": [
+        "100",
+        "99",
+        "101"
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "closes": [
+        "100",
+        "103",
+        "100"
+      ]
+    },
+    {
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "closes": [
+        "100",
+        "102",
+        "104"
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "name": "Bank of America",
+      "closes": [
+        "100",
+        "102",
+        "101"
+      ]
+    },
+    {
+      "symbol": "V",
+      "name": "Visa",
+      "closes": [
+        "100",
+        "101",
+        "103"
+      ]
+    },
+    {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group",
+      "closes": [
+        "100",
+        "99",
+        "101"
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "closes": [
+        "100",
+        "103",
+        "100"
+      ]
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "closes": [
+        "100",
+        "102",
+        "104"
+      ]
+    },
+    {
+      "symbol": "PG",
+      "name": "Procter & Gamble",
+      "closes": [
+        "100",
+        "102",
+        "101"
+      ]
+    },
+    {
+      "symbol": "KO",
+      "name": "Coca-Cola",
+      "closes": [
+        "100",
+        "101",
+        "103"
+      ]
+    },
+    {
+      "symbol": "HD",
+      "name": "Home Depot",
+      "closes": [
+        "100",
+        "99",
+        "101"
+      ]
+    },
+    {
+      "symbol": "CAT",
+      "name": "Caterpillar",
+      "closes": [
+        "100",
+        "103",
+        "100"
+      ]
+    },
+    {
+      "symbol": "NEE",
+      "name": "NextEra Energy",
+      "closes": [
+        "100",
+        "102",
+        "104"
+      ]
+    }
+  ],
+  "evidence_text": "Synthetic company revenue changed during the quarter. This invented passage is for software testing only.",
+  "budget": {
+    "max_companies": 20,
+    "max_model_calls": 45,
+    "max_reserved_output_tokens": 34560,
+    "max_retrieval_queries": 80,
+    "max_retries_per_step": 1,
+    "max_review_rounds": 1,
+    "max_revisions": 0,
+    "max_critic_prompt_characters": 64000
+  }
+}

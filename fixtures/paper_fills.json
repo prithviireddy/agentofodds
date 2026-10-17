@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "execution_at": "2025-02-03T21:00:00+00:00",
+  "fee_bps": "0",
+  "corporate_actions": [],
+  "prices": {"MSFT": "102", "JPM": "104", "JNJ": "100", "XOM": "101", "WMT": "105"},
+  "label": "Invented closing prices for a historical paper replay; not actual market data."
+}

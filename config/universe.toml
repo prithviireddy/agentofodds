@@ -1,0 +1,39 @@
+schema_version = 1
+name = "five-company-development"
+as_of = "2025-01-31T23:59:59Z"
+selection_rationale = "Cross-sector engineering sample, not a ranked portfolio or historical index membership. Sector labels are project-defined. SEC CIKs are explicit issuer identities."
+
+[[companies]]
+symbol = "MSFT"
+name = "Microsoft Corporation"
+sec_cik = "0000789019"
+sector = "Technology"
+rationale = "Software business example."
+
+[[companies]]
+symbol = "JPM"
+name = "JPMorgan Chase & Co."
+sec_cik = "0000019617"
+sector = "Financials"
+rationale = "Banking example with different financial-statement conventions."
+
+[[companies]]
+symbol = "JNJ"
+name = "Johnson & Johnson"
+sec_cik = "0000200406"
+sector = "Healthcare"
+rationale = "Healthcare business example."
+
+[[companies]]
+symbol = "XOM"
+name = "Exxon Mobil Corporation"
+sec_cik = "0000034088"
+sector = "Energy"
+rationale = "Energy business example."
+
+[[companies]]
+symbol = "WMT"
+name = "Walmart Inc."
+sec_cik = "0000104169"
+sector = "Consumer staples"
+rationale = "Retail business example."

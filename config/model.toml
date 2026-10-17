@@ -1,0 +1,8 @@
+schema_version = 1
+model = "gemini-3.6-flash"
+prompt_version = "m0.5-evidence-metadata-v1"
+max_output_tokens = 256
+temperature = 0
+thinking_level = "minimal"
+
+

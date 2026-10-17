@@ -1,0 +1,16 @@
+schema_version = 1
+as_of = "2025-01-31T23:59:59Z"
+
+[filing]
+symbol = "MSFT"
+cik = "0000789019"
+accession = "0000950170-25-010491"
+primary_document = "msft-20241231.htm"
+form = "10-Q"
+filed = "2025-01-29"
+
+[release]
+symbol = "MSFT"
+url = "https://www.microsoft.com/en-us/investor/earnings/fy-2025-q2/press-release-webcast"
+published_at = "2025-01-29T00:00:00Z"
+expected_text = ["January 29, 2025", "Microsoft Cloud and AI Strength Drives Second Quarter Results"]

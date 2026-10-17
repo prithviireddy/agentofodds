@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-30",
+  "timezone": "Asia/Calcutta",
+  "stage": "M5.3 complete at fixture demonstration scope",
+  "environment": {"platform": "Windows PowerShell", "uv": "0.9.9", "node": "v26.2.0", "npm": "11.13.0", "python": "3.14.3", "react": "19.3.0", "vite": "8.3.1"},
+  "tested_extraction": "data/m5_3_clean_demo_v2",
+  "checks": [
+    {
+      "command": "uv run --locked python -m unittest backend.tests.test_m5_demo_bundle -v",
+      "location": "maintained checkout",
+      "result": "passed",
+      "tests": 4,
+      "coverage": "repeatable ZIP, inventory exclusions, adapters/data source retention, corruption/unlisted/traversal rejection, required files and source overwrite prevention"
+    },
+    {
+      "command": "uv sync --locked --offline",
+      "location": "fresh corrected extraction",
+      "result": "passed",
+      "detail": "uv created .venv; locked NumPy 2.5.3 installed using existing local cache"
+    },
+    {
+      "command": "npm --prefix frontend ci --offline",
+      "location": "fresh corrected extraction",
+      "result": "passed",
+      "detail": "20 packages installed from cache; npm reported zero vulnerabilities"
+    },
+    {
+      "command": "npm --prefix frontend run build",
+      "location": "fresh corrected extraction",
+      "result": "passed",
+      "detail": "React production build with Vite"
+    },
+    {
+      "command": "uv run --locked python -m unittest discover -s backend/tests -v",
+      "location": "fresh corrected extraction",
+      "result": "passed",
+      "tests": 168,
+      "reported_test_seconds": 12.821,
+      "warnings": "Existing non-failing mocked HTTPError 429/503 cleanup ResourceWarnings"
+    },
+    {
+      "command": "uv run --locked python -m backend.app.compare_experiments --replay evidence/m5_2_comparison.json --output data/demo_replay.json",
+      "location": "fresh corrected extraction",
+      "result": "passed",
+      "successful_profile_variant_combinations": 8,
+      "detail": "JSON/Markdown replay; no model calls or current fixture inputs"
+    },
+    {
+      "command": "node frontend/smoke.cjs",
+      "location": "fresh corrected extraction; production build",
+      "result": "passed",
+      "PLAYWRIGHT_MODULE": "C:/Users/pruth/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+      "profiles": [
+        {"fixture_set": "five", "UI_BASE_URL": "http://127.0.0.1:8770", "EXPECTED_COMPANIES": 5},
+        {"fixture_set": "twenty", "UI_BASE_URL": "http://127.0.0.1:8771", "EXPECTED_COMPANIES": 20}
+      ],
+      "coverage": ["successful research and cited passage", "consent-gated paper approval, exact journal reconciliation and identical reload receipt", "two valuations, earlier replay, unchanged research and durable reload", "rejection hiding allocation and approval", "quota retry", "pause/reload/resume with test-only 150ms stage-response delay", "390px width within viewport and no page JavaScript errors"],
+      "visual_check": "Twenty-company monitoring-mobile.png inspected; historical labels, dates, results and holdings visible"
+    },
+    {
+      "command": "uv run --locked python -m backend.app.demo_bundle --output data/agent-of-odds-demo.zip --manifest evidence/m5_3_bundle_manifest.json; verify same ZIP with --verify",
+      "result": "passed",
+      "payload_files": 108,
+      "manifest_entry": "BUNDLE_MANIFEST.json",
+      "identity_check": "Final executable source, synthetic fixture, configuration and dependency bytes match tested extraction; documentation/verification refreshed afterward"
+    }
+  ],
+  "resolved_failure": {
+    "location": "initial extraction data/m5_3_clean_demo",
+    "observation": "Five test modules could not import adapters/data; runtime-data filter excluded four real Python source files",
+    "correction": "Exclude runtime data through source-prefix allowlist; include legitimate adapters/data source with regression coverage",
+    "verification": "Repeated fresh extraction passed all 168 tests and both browser profiles"
+  },
+  "limitations": [
+    "Windows and existing dependency caches verified; cache-free installation and other operating systems not tested",
+    "Python/Node runtimes, installed dependencies, compiled frontend and Playwright browsers excluded; installation may need internet",
+    "Presentation duration is an approximate outline, not a timed presenter rehearsal",
+    "Full-system generation is scripted; actual inference tokens/cost and independent financial/model quality unknown",
+    "Zero external provider calls, added provider spend, real trades or publication during rehearsal",
+    "Browser approvals/books/screenshots are ignored synthetic test data, not investor approvals or investment evidence",
+    "Hashes detect accidental corruption, not malicious reauthoring",
+    "No commit or remote; project files remain untracked"
+  ],
+  "next_step": "Rehearse on the presentation machine; scope independent evaluation separately"
+}

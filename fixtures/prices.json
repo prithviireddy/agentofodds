@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic",
+  "provider": "fixture",
+  "currency": "USD",
+  "feed": "synthetic-daily-close",
+  "adjustment": "none",
+  "created_at": "2026-09-20T00:00:00Z",
+  "bars": [
+    {
+      "symbol": "MSFT",
+      "session": "2025-01-30",
+      "close": "100.00",
+      "available_at": "2025-01-30T22:00:00Z",
+      "source_id": "synthetic:MSFT:2025-01-30"
+    },
+    {
+      "symbol": "MSFT",
+      "session": "2025-01-31",
+      "close": "101.00",
+      "available_at": "2025-01-31T22:00:00Z",
+      "source_id": "synthetic:MSFT:2025-01-31"
+    },
+    {
+      "symbol": "JPM",
+      "session": "2025-01-30",
+      "close": "100.00",
+      "available_at": "2025-01-30T22:00:00Z",
+      "source_id": "synthetic:JPM:2025-01-30"
+    },
+    {
+      "symbol": "JPM",
+      "session": "2025-01-31",
+      "close": "99.00",
+      "available_at": "2025-01-31T22:00:00Z",
+      "source_id": "synthetic:JPM:2025-01-31"
+    },
+    {
+      "symbol": "JNJ",
+      "session": "2025-01-30",
+      "close": "100.00",
+      "available_at": "2025-01-30T22:00:00Z",
+      "source_id": "synthetic:JNJ:2025-01-30"
+    },
+    {
+      "symbol": "JNJ",
+      "session": "2025-01-31",
+      "close": "100.50",
+      "available_at": "2025-01-31T22:00:00Z",
+      "source_id": "synthetic:JNJ:2025-01-31"
+    },
+    {
+      "symbol": "XOM",
+      "session": "2025-01-30",
+      "close": "100.00",
+      "available_at": "2025-01-30T22:00:00Z",
+      "source_id": "synthetic:XOM:2025-01-30"
+    },
+    {
+      "symbol": "XOM",
+      "session": "2025-01-31",
+      "close": "102.00",
+      "available_at": "2025-01-31T22:00:00Z",
+      "source_id": "synthetic:XOM:2025-01-31"
+    },
+    {
+      "symbol": "WMT",
+      "session": "2025-01-30",
+      "close": "100.00",
+      "available_at": "2025-01-30T22:00:00Z",
+      "source_id": "synthetic:WMT:2025-01-30"
+    },
+    {
+      "symbol": "WMT",
+      "session": "2025-01-31",
+      "close": "100.25",
+      "available_at": "2025-01-31T22:00:00Z",
+      "source_id": "synthetic:WMT:2025-01-31"
+    }
+  ]
+}

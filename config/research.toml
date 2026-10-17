@@ -1,0 +1,10 @@
+schema_version = 1
+symbol = "MSFT"
+as_of = "2025-01-31T23:59:59Z"
+prompt_version = "fundamental-research-v1"
+top_k_per_query = 3
+queries = [
+  "cloud revenue operating income",
+  "capital expenditure infrastructure investment",
+  "risk demand competition margins",
+]

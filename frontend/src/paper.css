@@ -1,0 +1,94 @@
+.approval-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  min-height: 44px;
+  margin: 0 0 17px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.approval-consent input {
+  margin-top: 3px;
+}
+.approval-actions {
+  background: var(--parchment);
+  padding: 24px;
+  border-radius: var(--radius-control);
+  margin: 24px 0;
+}
+.approval-record {
+  margin: 24px 0;
+  padding: 17px 0;
+  border-top: 1px solid var(--line);
+}
+.approval-record p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+.reconciliation {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.limitations {
+  margin: 17px 0;
+}
+[data-testid="monitoring"] {
+  margin-top: 32px;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+[data-testid="paper-ledger"] .table-scroll table {
+  min-width: 440px;
+}
+[data-testid="monitoring"] .table-scroll table {
+  min-width: 0;
+}
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 24px;
+  margin: 24px 0;
+}
+.timeline div {
+  min-width: 0;
+}
+.timeline dt {
+  font-size: 14px;
+  color: var(--muted);
+}
+.timeline dd {
+  margin: 4px 0 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.valuation-controls {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  margin-top: 24px;
+}
+.valuation-controls .field {
+  flex: 1;
+  margin: 0;
+}
+.valuation-controls button {
+  flex-shrink: 0;
+}
+[data-testid="valuation-result"] {
+  margin-top: 24px;
+}
+@media (max-width: 1068px) and (min-width: 834px), (max-width: 640px) {
+  .valuation-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+  .approval-actions {
+    padding: 17px;
+  }
+  .approval-actions button {
+    width: 100%;
+  }
+}

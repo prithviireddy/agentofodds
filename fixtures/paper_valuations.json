@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "label": "Invented historical valuation prices; not actual market performance or fresh research.",
+  "currency": "USD", "adjustment": "none", "max_price_age_days": 1,
+  "frames": [
+    {"valuation_at": "2025-02-04T22:00:00+00:00", "corporate_actions": [], "prices": [
+      {"symbol":"MSFT","session":"2025-02-04","close":"103","available_at":"2025-02-04T21:05:00Z","source_id":"fixture:valuation:MSFT:2025-02-04"},
+      {"symbol":"JPM","session":"2025-02-04","close":"103","available_at":"2025-02-04T21:05:00Z","source_id":"fixture:valuation:JPM:2025-02-04"},
+      {"symbol":"JNJ","session":"2025-02-04","close":"102","available_at":"2025-02-04T21:05:00Z","source_id":"fixture:valuation:JNJ:2025-02-04"},
+      {"symbol":"XOM","session":"2025-02-04","close":"100","available_at":"2025-02-04T21:05:00Z","source_id":"fixture:valuation:XOM:2025-02-04"},
+      {"symbol":"WMT","session":"2025-02-04","close":"106","available_at":"2025-02-04T21:05:00Z","source_id":"fixture:valuation:WMT:2025-02-04"}
+    ]},
+    {"valuation_at": "2025-02-05T22:00:00+00:00", "corporate_actions": [], "prices": [
+      {"symbol":"MSFT","session":"2025-02-05","close":"101","available_at":"2025-02-05T21:05:00Z","source_id":"fixture:valuation:MSFT:2025-02-05"},
+      {"symbol":"JPM","session":"2025-02-05","close":"106","available_at":"2025-02-05T21:05:00Z","source_id":"fixture:valuation:JPM:2025-02-05"},
+      {"symbol":"JNJ","session":"2025-02-05","close":"101","available_at":"2025-02-05T21:05:00Z","source_id":"fixture:valuation:JNJ:2025-02-05"},
+      {"symbol":"XOM","session":"2025-02-05","close":"103","available_at":"2025-02-05T21:05:00Z","source_id":"fixture:valuation:XOM:2025-02-05"},
+      {"symbol":"WMT","session":"2025-02-05","close":"104","available_at":"2025-02-05T21:05:00Z","source_id":"fixture:valuation:WMT:2025-02-05"}
+    ]}
+  ]
+}

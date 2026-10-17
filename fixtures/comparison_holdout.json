@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "label": "Synthetic evaluation-only holdout, invented before running comparisons; not real market data.",
+  "currency": "USD",
+  "adjustment": "none",
+  "max_price_age_days": 1,
+  "frames": [
+    {
+      "valuation_at": "2025-02-14T22:00:00+00:00",
+      "corporate_actions": [],
+      "prices": [
+        {
+          "symbol": "MSFT",
+          "session": "2025-02-14",
+          "close": "103",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:MSFT:2025-02-14"
+        },
+        {
+          "symbol": "JPM",
+          "session": "2025-02-14",
+          "close": "97",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:JPM:2025-02-14"
+        },
+        {
+          "symbol": "JNJ",
+          "session": "2025-02-14",
+          "close": "104",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:JNJ:2025-02-14"
+        },
+        {
+          "symbol": "XOM",
+          "session": "2025-02-14",
+          "close": "101",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:XOM:2025-02-14"
+        },
+        {
+          "symbol": "WMT",
+          "session": "2025-02-14",
+          "close": "105",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:WMT:2025-02-14"
+        },
+        {
+          "symbol": "AAPL",
+          "session": "2025-02-14",
+          "close": "108",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:AAPL:2025-02-14"
+        },
+        {
+          "symbol": "NVDA",
+          "session": "2025-02-14",
+          "close": "102",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:NVDA:2025-02-14"
+        },
+        {
+          "symbol": "GOOGL",
+          "session": "2025-02-14",
+          "close": "109",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:GOOGL:2025-02-14"
+        },
+        {
+          "symbol": "AMZN",
+          "session": "2025-02-14",
+          "close": "106",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:AMZN:2025-02-14"
+        },
+        {
+          "symbol": "META",
+          "session": "2025-02-14",
+          "close": "110",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:META:2025-02-14"
+        },
+        {
+          "symbol": "BAC",
+          "session": "2025-02-14",
+          "close": "113",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:BAC:2025-02-14"
+        },
+        {
+          "symbol": "V",
+          "session": "2025-02-14",
+          "close": "107",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:V:2025-02-14"
+        },
+        {
+          "symbol": "UNH",
+          "session": "2025-02-14",
+          "close": "114",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:UNH:2025-02-14"
+        },
+        {
+          "symbol": "PFE",
+          "session": "2025-02-14",
+          "close": "111",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:PFE:2025-02-14"
+        },
+        {
+          "symbol": "CVX",
+          "session": "2025-02-14",
+          "close": "115",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:CVX:2025-02-14"
+        },
+        {
+          "symbol": "PG",
+          "session": "2025-02-14",
+          "close": "118",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:PG:2025-02-14"
+        },
+        {
+          "symbol": "KO",
+          "session": "2025-02-14",
+          "close": "112",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:KO:2025-02-14"
+        },
+        {
+          "symbol": "HD",
+          "session": "2025-02-14",
+          "close": "119",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:HD:2025-02-14"
+        },
+        {
+          "symbol": "CAT",
+          "session": "2025-02-14",
+          "close": "116",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:CAT:2025-02-14"
+        },
+        {
+          "symbol": "NEE",
+          "session": "2025-02-14",
+          "close": "120",
+          "available_at": "2025-02-14T21:05:00Z",
+          "source_id": "fixture:comparison-holdout:NEE:2025-02-14"
+        }
+      ]
+    }
+  ]
+}

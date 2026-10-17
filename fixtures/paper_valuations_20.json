@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "label": "Invented 20-company historical valuation prices; not market performance or fresh research.",
+  "currency": "USD",
+  "adjustment": "none",
+  "max_price_age_days": 1,
+  "frames": [
+    {
+      "valuation_at": "2025-02-04T22:00:00+00:00",
+      "corporate_actions": [],
+      "prices": [
+        {
+          "symbol": "MSFT",
+          "session": "2025-02-04",
+          "close": "101",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:MSFT:2025-02-04"
+        },
+        {
+          "symbol": "JPM",
+          "session": "2025-02-04",
+          "close": "102",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:JPM:2025-02-04"
+        },
+        {
+          "symbol": "JNJ",
+          "session": "2025-02-04",
+          "close": "103",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:JNJ:2025-02-04"
+        },
+        {
+          "symbol": "XOM",
+          "session": "2025-02-04",
+          "close": "104",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:XOM:2025-02-04"
+        },
+        {
+          "symbol": "WMT",
+          "session": "2025-02-04",
+          "close": "105",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:WMT:2025-02-04"
+        },
+        {
+          "symbol": "AAPL",
+          "session": "2025-02-04",
+          "close": "106",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:AAPL:2025-02-04"
+        },
+        {
+          "symbol": "NVDA",
+          "session": "2025-02-04",
+          "close": "107",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:NVDA:2025-02-04"
+        },
+        {
+          "symbol": "GOOGL",
+          "session": "2025-02-04",
+          "close": "108",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:GOOGL:2025-02-04"
+        },
+        {
+          "symbol": "AMZN",
+          "session": "2025-02-04",
+          "close": "109",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:AMZN:2025-02-04"
+        },
+        {
+          "symbol": "META",
+          "session": "2025-02-04",
+          "close": "110",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:META:2025-02-04"
+        },
+        {
+          "symbol": "BAC",
+          "session": "2025-02-04",
+          "close": "111",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:BAC:2025-02-04"
+        },
+        {
+          "symbol": "V",
+          "session": "2025-02-04",
+          "close": "112",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:V:2025-02-04"
+        },
+        {
+          "symbol": "UNH",
+          "session": "2025-02-04",
+          "close": "113",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:UNH:2025-02-04"
+        },
+        {
+          "symbol": "PFE",
+          "session": "2025-02-04",
+          "close": "114",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:PFE:2025-02-04"
+        },
+        {
+          "symbol": "CVX",
+          "session": "2025-02-04",
+          "close": "115",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:CVX:2025-02-04"
+        },
+        {
+          "symbol": "PG",
+          "session": "2025-02-04",
+          "close": "116",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:PG:2025-02-04"
+        },
+        {
+          "symbol": "KO",
+          "session": "2025-02-04",
+          "close": "117",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:KO:2025-02-04"
+        },
+        {
+          "symbol": "HD",
+          "session": "2025-02-04",
+          "close": "118",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:HD:2025-02-04"
+        },
+        {
+          "symbol": "CAT",
+          "session": "2025-02-04",
+          "close": "119",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:CAT:2025-02-04"
+        },
+        {
+          "symbol": "NEE",
+          "session": "2025-02-04",
+          "close": "120",
+          "available_at": "2025-02-04T21:05:00Z",
+          "source_id": "fixture:valuation:NEE:2025-02-04"
+        }
+      ]
+    },
+    {
+      "valuation_at": "2025-02-05T22:00:00+00:00",
+      "corporate_actions": [],
+      "prices": [
+        {
+          "symbol": "MSFT",
+          "session": "2025-02-05",
+          "close": "99",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:MSFT:2025-02-05"
+        },
+        {
+          "symbol": "JPM",
+          "session": "2025-02-05",
+          "close": "100",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:JPM:2025-02-05"
+        },
+        {
+          "symbol": "JNJ",
+          "session": "2025-02-05",
+          "close": "101",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:JNJ:2025-02-05"
+        },
+        {
+          "symbol": "XOM",
+          "session": "2025-02-05",
+          "close": "102",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:XOM:2025-02-05"
+        },
+        {
+          "symbol": "WMT",
+          "session": "2025-02-05",
+          "close": "103",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:WMT:2025-02-05"
+        },
+        {
+          "symbol": "AAPL",
+          "session": "2025-02-05",
+          "close": "104",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:AAPL:2025-02-05"
+        },
+        {
+          "symbol": "NVDA",
+          "session": "2025-02-05",
+          "close": "105",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:NVDA:2025-02-05"
+        },
+        {
+          "symbol": "GOOGL",
+          "session": "2025-02-05",
+          "close": "106",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:GOOGL:2025-02-05"
+        },
+        {
+          "symbol": "AMZN",
+          "session": "2025-02-05",
+          "close": "107",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:AMZN:2025-02-05"
+        },
+        {
+          "symbol": "META",
+          "session": "2025-02-05",
+          "close": "108",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:META:2025-02-05"
+        },
+        {
+          "symbol": "BAC",
+          "session": "2025-02-05",
+          "close": "109",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:BAC:2025-02-05"
+        },
+        {
+          "symbol": "V",
+          "session": "2025-02-05",
+          "close": "110",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:V:2025-02-05"
+        },
+        {
+          "symbol": "UNH",
+          "session": "2025-02-05",
+          "close": "111",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:UNH:2025-02-05"
+        },
+        {
+          "symbol": "PFE",
+          "session": "2025-02-05",
+          "close": "112",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:PFE:2025-02-05"
+        },
+        {
+          "symbol": "CVX",
+          "session": "2025-02-05",
+          "close": "113",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:CVX:2025-02-05"
+        },
+        {
+          "symbol": "PG",
+          "session": "2025-02-05",
+          "close": "114",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:PG:2025-02-05"
+        },
+        {
+          "symbol": "KO",
+          "session": "2025-02-05",
+          "close": "115",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:KO:2025-02-05"
+        },
+        {
+          "symbol": "HD",
+          "session": "2025-02-05",
+          "close": "116",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:HD:2025-02-05"
+        },
+        {
+          "symbol": "CAT",
+          "session": "2025-02-05",
+          "close": "117",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:CAT:2025-02-05"
+        },
+        {
+          "symbol": "NEE",
+          "session": "2025-02-05",
+          "close": "118",
+          "available_at": "2025-02-05T21:05:00Z",
+          "source_id": "fixture:valuation:NEE:2025-02-05"
+        }
+      ]
+    }
+  ]
+}

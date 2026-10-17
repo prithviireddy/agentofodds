@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "execution_at": "2025-02-03T21:00:00+00:00",
+  "fee_bps": "0",
+  "corporate_actions": [],
+  "prices": {
+    "MSFT": "100",
+    "JPM": "101",
+    "JNJ": "102",
+    "XOM": "103",
+    "WMT": "104",
+    "AAPL": "105",
+    "NVDA": "106",
+    "GOOGL": "107",
+    "AMZN": "108",
+    "META": "109",
+    "BAC": "110",
+    "V": "111",
+    "UNH": "112",
+    "PFE": "113",
+    "CVX": "114",
+    "PG": "115",
+    "KO": "116",
+    "HD": "117",
+    "CAT": "118",
+    "NEE": "119"
+  },
+  "label": "Invented closing prices for a 20-company historical paper replay; not actual market data."
+}

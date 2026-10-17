@@ -1,0 +1,911 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "schema_version": 1,
+      "measured_at": "2026-09-30T04:58:44.276112+00:00",
+      "fixture_set": "five",
+      "mode": "offline_synthetic_scaling_proof",
+      "run_id": "7392ba70b6c343fb9afbc528bad6d1a8",
+      "workflow_fingerprint": "9f5ebf07639b50fa5042da287f2513167bd309db05cf7344f51db74bb58d3126",
+      "fixture_hashes": {
+        "research": "1c8d5bc169b3cf0d2763dd8f7c1fec838bf6f1ea1b9d95dac34124e35e85c6a7",
+        "fills": "01cd8e3a78aa9a29d7ba33f6e2e669fc4cb26c116f682cc8f6b39320b293616c",
+        "valuations": "35707a988e49a0956d150b560fe49592def8e3c8c0b505a06fd39c288207a305"
+      },
+      "policy": {
+        "capital": "10000",
+        "symbols": [
+          "MSFT",
+          "JPM",
+          "JNJ",
+          "XOM",
+          "WMT"
+        ],
+        "excluded_symbols": [],
+        "min_asset_weight": "0",
+        "max_asset_weight": "0.5",
+        "min_cash_weight": "0",
+        "max_cash_weight": "0.1",
+        "review_frequency": "manual",
+        "fundamental_assessments": [
+          "neutral"
+        ],
+        "news_assessments": [
+          "neutral"
+        ],
+        "max_evidence_age_days": 30,
+        "max_price_age_days": 1,
+        "min_return_observations": 2,
+        "max_sample_volatility": 0.2,
+        "min_candidates": 2,
+        "scenario": "normal"
+      },
+      "budget": {
+        "max_companies": 5,
+        "max_model_calls": 15,
+        "max_reserved_output_tokens": 11520,
+        "max_retrieval_queries": 20,
+        "max_retries_per_step": 1,
+        "max_review_rounds": 1,
+        "max_revisions": 0,
+        "max_critic_prompt_characters": 8000
+      },
+      "coverage": [
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "JPM",
+          "name": "JPMorgan Chase",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Johnson & Johnson",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "XOM",
+          "name": "Exxon Mobil",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "WMT",
+          "name": "Walmart",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        }
+      ],
+      "workflow_status": "success",
+      "paper_status": "success",
+      "saved_valuations": 2,
+      "report_count": 10,
+      "candidate_count": 5,
+      "workflow_seconds": 0.4010880999994697,
+      "total_seconds": 0.44115230000170413,
+      "stage_seconds": [
+        {
+          "step": "quantitative",
+          "seconds": 0.009361900010844693
+        },
+        {
+          "step": "fundamental:MSFT",
+          "seconds": 0.0234517000062624
+        },
+        {
+          "step": "news:MSFT",
+          "seconds": 0.02094329999818001
+        },
+        {
+          "step": "fundamental:JPM",
+          "seconds": 0.02641540000331588
+        },
+        {
+          "step": "news:JPM",
+          "seconds": 0.025139600009424612
+        },
+        {
+          "step": "fundamental:JNJ",
+          "seconds": 0.029540599993197247
+        },
+        {
+          "step": "news:JNJ",
+          "seconds": 0.025476499999058433
+        },
+        {
+          "step": "fundamental:XOM",
+          "seconds": 0.02834070000972133
+        },
+        {
+          "step": "news:XOM",
+          "seconds": 0.02812520001316443
+        },
+        {
+          "step": "fundamental:WMT",
+          "seconds": 0.025985500004026107
+        },
+        {
+          "step": "news:WMT",
+          "seconds": 0.03136149999045301
+        },
+        {
+          "step": "selection",
+          "seconds": 0.025323299996671267
+        },
+        {
+          "step": "allocation",
+          "seconds": 0.033285800003795885
+        },
+        {
+          "step": "review",
+          "seconds": 0.02591039999970235
+        },
+        {
+          "step": "critic:0",
+          "seconds": 0.032462900009704754
+        }
+      ],
+      "usage": {
+        "model_calls_reserved": 11,
+        "output_tokens_reserved": 8448,
+        "retrieval_queries_reserved": 10,
+        "reported_token_totals": {
+          "promptTokenCount": 0,
+          "candidatesTokenCount": 0,
+          "totalTokenCount": 0
+        },
+        "calls_with_unknown_total_usage": 11,
+        "cost": null,
+        "concurrency": 1
+      },
+      "max_prompt_characters": 6194,
+      "critic_prompt_characters": [
+        6194
+      ],
+      "external_calls": 0,
+      "additional_provider_spend_usd": "0",
+      "limitations": [
+        "One local wall-clock sample including checkpoint I/O; not provider latency or a performance benchmark.",
+        "Scripted fixture model has no measured inference tokens or monetary inference cost; reserved output tokens are a cap.",
+        "One identical invented passage per company serves both roles; independent news and live coverage are not established.",
+        "Three sessions and repeated return patterns are a scaling fixture, not a statistically adequate covariance sample.",
+        "Illustrative company labels are not verified point-in-time universe membership. Temporary automated approvals are test fixtures."
+      ]
+    },
+    {
+      "schema_version": 1,
+      "measured_at": "2026-09-30T04:58:46.267141+00:00",
+      "fixture_set": "twenty",
+      "mode": "offline_synthetic_scaling_proof",
+      "run_id": "645722a165d442ecaf451b76fc8d0406",
+      "workflow_fingerprint": "6cfab55d8171f601a9ab561074aa0b5cd86a243fad3a926acc68c2c197a72a6b",
+      "fixture_hashes": {
+        "research": "b3daf57061d7144f10c51eb6cd04ebb7a336b26d213f61eee081233953154bcc",
+        "fills": "1375d848544cd847ba6c23224e4258c975e6b64bdaa5dac4e2356626467c6251",
+        "valuations": "9c91362fdb75a17ff02fa976c5da114e3c09e2fe1a78f7e875e309a096a5d60e"
+      },
+      "policy": {
+        "capital": "10000",
+        "symbols": [
+          "MSFT",
+          "JPM",
+          "JNJ",
+          "XOM",
+          "WMT",
+          "AAPL",
+          "NVDA",
+          "GOOGL",
+          "AMZN",
+          "META",
+          "BAC",
+          "V",
+          "UNH",
+          "PFE",
+          "CVX",
+          "PG",
+          "KO",
+          "HD",
+          "CAT",
+          "NEE"
+        ],
+        "excluded_symbols": [],
+        "min_asset_weight": "0",
+        "max_asset_weight": "0.5",
+        "min_cash_weight": "0",
+        "max_cash_weight": "0.1",
+        "review_frequency": "manual",
+        "fundamental_assessments": [
+          "neutral"
+        ],
+        "news_assessments": [
+          "neutral"
+        ],
+        "max_evidence_age_days": 30,
+        "max_price_age_days": 1,
+        "min_return_observations": 2,
+        "max_sample_volatility": 0.2,
+        "min_candidates": 2,
+        "scenario": "normal"
+      },
+      "budget": {
+        "max_companies": 20,
+        "max_model_calls": 45,
+        "max_reserved_output_tokens": 34560,
+        "max_retrieval_queries": 80,
+        "max_retries_per_step": 1,
+        "max_review_rounds": 1,
+        "max_revisions": 0,
+        "max_critic_prompt_characters": 64000
+      },
+      "coverage": [
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "JPM",
+          "name": "JPMorgan Chase",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Johnson & Johnson",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "XOM",
+          "name": "Exxon Mobil",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "WMT",
+          "name": "Walmart",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "META",
+          "name": "Meta Platforms",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "BAC",
+          "name": "Bank of America",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "V",
+          "name": "Visa",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "UNH",
+          "name": "UnitedHealth Group",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "PFE",
+          "name": "Pfizer",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "CVX",
+          "name": "Chevron",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "PG",
+          "name": "Procter & Gamble",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "KO",
+          "name": "Coca-Cola",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "HD",
+          "name": "Home Depot",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "CAT",
+          "name": "Caterpillar",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        },
+        {
+          "symbol": "NEE",
+          "name": "NextEra Energy",
+          "price_sessions": 3,
+          "research": {
+            "fundamental": {
+              "status": "success",
+              "evidence_count": 1
+            },
+            "news": {
+              "status": "success",
+              "evidence_count": 1
+            }
+          },
+          "opening_fill": true,
+          "valuation_frames": 2,
+          "source_kind": "synthetic_shared_passage",
+          "live_coverage": "not_audited"
+        }
+      ],
+      "workflow_status": "success",
+      "paper_status": "success",
+      "saved_valuations": 2,
+      "report_count": 40,
+      "candidate_count": 20,
+      "workflow_seconds": 1.9336716000107117,
+      "total_seconds": 1.9896573000005446,
+      "stage_seconds": [
+        {
+          "step": "quantitative",
+          "seconds": 0.011021800004527904
+        },
+        {
+          "step": "fundamental:MSFT",
+          "seconds": 0.030591699993237853
+        },
+        {
+          "step": "news:MSFT",
+          "seconds": 0.03286759999173228
+        },
+        {
+          "step": "fundamental:JPM",
+          "seconds": 0.033714799996232614
+        },
+        {
+          "step": "news:JPM",
+          "seconds": 0.0340007000049809
+        },
+        {
+          "step": "fundamental:JNJ",
+          "seconds": 0.033265600010054186
+        },
+        {
+          "step": "news:JNJ",
+          "seconds": 0.03361650000442751
+        },
+        {
+          "step": "fundamental:XOM",
+          "seconds": 0.03352279998944141
+        },
+        {
+          "step": "news:XOM",
+          "seconds": 0.03394280000065919
+        },
+        {
+          "step": "fundamental:WMT",
+          "seconds": 0.03664299999945797
+        },
+        {
+          "step": "news:WMT",
+          "seconds": 0.03743969999777619
+        },
+        {
+          "step": "fundamental:AAPL",
+          "seconds": 0.038129699998535216
+        },
+        {
+          "step": "news:AAPL",
+          "seconds": 0.03908899999805726
+        },
+        {
+          "step": "fundamental:NVDA",
+          "seconds": 0.037551300003542565
+        },
+        {
+          "step": "news:NVDA",
+          "seconds": 0.03821460000472143
+        },
+        {
+          "step": "fundamental:GOOGL",
+          "seconds": 0.03971520000777673
+        },
+        {
+          "step": "news:GOOGL",
+          "seconds": 0.04051860001345631
+        },
+        {
+          "step": "fundamental:AMZN",
+          "seconds": 0.04020590000436641
+        },
+        {
+          "step": "news:AMZN",
+          "seconds": 0.04126240000186954
+        },
+        {
+          "step": "fundamental:META",
+          "seconds": 0.03993520000949502
+        },
+        {
+          "step": "news:META",
+          "seconds": 0.041534000003593974
+        },
+        {
+          "step": "fundamental:BAC",
+          "seconds": 0.042472300003282726
+        },
+        {
+          "step": "news:BAC",
+          "seconds": 0.040949900008854456
+        },
+        {
+          "step": "fundamental:V",
+          "seconds": 0.04448979999870062
+        },
+        {
+          "step": "news:V",
+          "seconds": 0.04330609999306034
+        },
+        {
+          "step": "fundamental:UNH",
+          "seconds": 0.044529399994644336
+        },
+        {
+          "step": "news:UNH",
+          "seconds": 0.045206499999039806
+        },
+        {
+          "step": "fundamental:PFE",
+          "seconds": 0.04189069999847561
+        },
+        {
+          "step": "news:PFE",
+          "seconds": 0.04515720000199508
+        },
+        {
+          "step": "fundamental:CVX",
+          "seconds": 0.040928400005213916
+        },
+        {
+          "step": "news:CVX",
+          "seconds": 0.04975930000364315
+        },
+        {
+          "step": "fundamental:PG",
+          "seconds": 0.04881929999100976
+        },
+        {
+          "step": "news:PG",
+          "seconds": 0.04894130000320729
+        },
+        {
+          "step": "fundamental:KO",
+          "seconds": 0.05030610000540037
+        },
+        {
+          "step": "news:KO",
+          "seconds": 0.0485049999988405
+        },
+        {
+          "step": "fundamental:HD",
+          "seconds": 0.051765600001090206
+        },
+        {
+          "step": "news:HD",
+          "seconds": 0.049651499997708015
+        },
+        {
+          "step": "fundamental:CAT",
+          "seconds": 0.05047990000457503
+        },
+        {
+          "step": "news:CAT",
+          "seconds": 0.05422819999512285
+        },
+        {
+          "step": "fundamental:NEE",
+          "seconds": 0.05746009999711532
+        },
+        {
+          "step": "news:NEE",
+          "seconds": 0.053682400000980124
+        },
+        {
+          "step": "selection",
+          "seconds": 0.04698949999874458
+        },
+        {
+          "step": "allocation",
+          "seconds": 0.05559079999511596
+        },
+        {
+          "step": "review",
+          "seconds": 0.05017609999049455
+        },
+        {
+          "step": "critic:0",
+          "seconds": 0.06812549999449402
+        }
+      ],
+      "usage": {
+        "model_calls_reserved": 41,
+        "output_tokens_reserved": 31488,
+        "retrieval_queries_reserved": 40,
+        "reported_token_totals": {
+          "promptTokenCount": 0,
+          "candidatesTokenCount": 0,
+          "totalTokenCount": 0
+        },
+        "calls_with_unknown_total_usage": 41,
+        "cost": null,
+        "concurrency": 1
+      },
+      "max_prompt_characters": 21663,
+      "critic_prompt_characters": [
+        21663
+      ],
+      "external_calls": 0,
+      "additional_provider_spend_usd": "0",
+      "limitations": [
+        "One local wall-clock sample including checkpoint I/O; not provider latency or a performance benchmark.",
+        "Scripted fixture model has no measured inference tokens or monetary inference cost; reserved output tokens are a cap.",
+        "One identical invented passage per company serves both roles; independent news and live coverage are not established.",
+        "Three sessions and repeated return patterns are a scaling fixture, not a statistically adequate covariance sample.",
+        "Illustrative company labels are not verified point-in-time universe membership. Temporary automated approvals are test fixtures."
+      ]
+    }
+  ]
+}

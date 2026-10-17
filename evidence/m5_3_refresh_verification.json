@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-01",
+  "timezone": "Asia/Calcutta",
+  "stage": "M5.3 refreshed college demonstration",
+  "tested_extraction": "data/m5_3_refresh_20261001",
+  "environment": {
+    "node": "v26.2.0",
+    "npm": "11.13.0",
+    "uv": "0.9.9",
+    "platform": "Windows PowerShell",
+    "python": "3.14.3"
+  },
+  "checks": [
+    {
+      "location": "fresh extraction",
+      "result": "passed",
+      "detail": "New .venv; NumPy 2.5.3 from existing cache",
+      "command": "uv sync --locked --offline"
+    },
+    {
+      "location": "fresh extraction",
+      "result": "passed",
+      "detail": "20 packages; existing cache",
+      "command": "npm --prefix frontend ci --offline"
+    },
+    {
+      "location": "fresh extraction",
+      "result": "passed",
+      "command": "npm --prefix frontend run build"
+    },
+    {
+      "location": "fresh extraction",
+      "result": "failed",
+      "detail": "Existing frontend/src/main.jsx formatting warning; no UI edits performed",
+      "command": "npm --prefix frontend run check"
+    },
+    {
+      "location": "fresh extraction",
+      "command": "uv run --locked python -m unittest discover -s backend/tests -q",
+      "result": "passed",
+      "tests": 168,
+      "reported_test_seconds": 22.331,
+      "warnings": "Non-failing mocked HTTPError 429/503 cleanup ResourceWarnings"
+    },
+    {
+      "location": "fresh extraction",
+      "successful_combinations": 8,
+      "result": "passed",
+      "detail": "No model calls or current fixtures",
+      "command": "uv run --locked python -m backend.app.compare_experiments --replay evidence/m5_2_comparison.json --output data/demo_replay.json"
+    },
+    {
+      "fixture_set": "five",
+      "result": "started_then_stopped",
+      "command": "uv run --locked python -m backend.app.ui --port 8780"
+    },
+    {
+      "fixture_set": "twenty",
+      "result": "started_then_stopped",
+      "command": "uv run --locked python -m backend.app.ui --fixture-set twenty --port 8781"
+    },
+    {
+      "screenshots_visually_inspected": false,
+      "profiles": [
+        {
+          "UI_BASE_URL": "http://127.0.0.1:8780",
+          "EXPECTED_COMPANIES": 5
+        },
+        {
+          "UI_BASE_URL": "http://127.0.0.1:8781",
+          "EXPECTED_COMPANIES": 20
+        }
+      ],
+      "location": "fresh extraction; production build",
+      "command": "node frontend/smoke.cjs",
+      "result": "passed",
+      "PLAYWRIGHT_MODULE": "C:/Users/pruth/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+      "coverage": [
+        "research and cited passage",
+        "consent-gated approval and identical reload receipt",
+        "exact ledger reconciliation",
+        "two valuations and saved replay without research changes",
+        "rejection, quota retry, pause/resume",
+        "390px containment; no page JS errors"
+      ]
+    }
+  ],
+  "package": {
+    "payload_files": 113,
+    "final_integrity_record": "data/m5_3_refresh_integrity.json",
+    "detail": "Final integrity/byte-repeatability and tested-source identity are independently recorded after documentation refresh",
+    "archive": "data/agent-of-odds-demo.zip",
+    "manifest": "evidence/m5_3_bundle_manifest.json"
+  },
+  "limits": [
+    "Windows with existing caches only; cache-free and other-OS setup unverified",
+    "Approximately seven-minute outline; no timed human presentation",
+    "Chromium smoke only; no new full design audit or visual screenshot inspection",
+    "All approvals/books are synthetic test data; runtime artifacts excluded",
+    "No external provider call, added provider spend, publication or real trade",
+    "Actual full-workflow inference usage/cost unknown; live proofs remain historical",
+    "Optional formatting check failed on existing main.jsx",
+    "No commit; unrelated untracked work preserved"
+  ],
+  "next_step": "Rehearse on presentation machine; independent research and financial evaluation remain separately scoped"
+}

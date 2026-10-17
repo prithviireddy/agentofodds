@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiment_id": "m5-2-synthetic-ablation-v1",
+  "profiles": ["five", "twenty"],
+  "decision_cutoff": "2025-01-31T23:59:59Z",
+  "execution_at": "2025-02-03T21:00:00+00:00",
+  "development_valuation_at": "2025-02-05T22:00:00+00:00",
+  "holdout_valuation_at": "2025-02-14T22:00:00+00:00",
+  "transaction_cost_bps": "10",
+  "slippage": "zero",
+  "dividends": "unsupported_reject",
+  "taxes": "excluded",
+  "max_price_age_days": 1,
+  "variants": ["equal_weight", "numerical_only", "combined_researcher", "separate_researchers"],
+  "research_control": "Both research variants use the same evidence eligibility, selection, numerical optimiser and one common critic; combined means one researcher call per company, not one total agent including critic.",
+  "output_budget_control": "1536 tokens per combined call versus two 768-token role calls; both use one 768-token critic call.",
+  "selection_control": "Baselines retain the full configured universe; research variants use the same eligibility policy. Report candidate sets separately from allocation effects.",
+  "holdout_scope": "New synthetic evaluation-only prices, withheld from decision functions. Not independently collected or statistically untouched market evidence; no tuning/search in this experiment.",
+  "metrics": ["net_return_since_funding", "pnl_usd", "candidate_count", "scripted_call_count", "reserved_output_tokens"],
+  "tuning": "none"
+}
