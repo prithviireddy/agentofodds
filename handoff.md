@@ -1,4 +1,13 @@
-# Current Handoff — Agent of Odds
+# Current Handoff - Agent of Odds
+
+## Latest checkpoint: GitHub upload - 2026-10-17
+
+- User requested pushing everything to GitHub. Created private `https://github.com/prithviireddy/agentofodds`, configured `origin`, and pushed 133 project files on `main`. Initial snapshot commit: `1cec08cc8facd48c8cccd6c6da87178b3868b004`; `git ls-remote origin refs/heads/main` matched local HEAD after push.
+- Existing `.gitignore` excludes `.env`, data/runtime books and ZIPs, dependencies, build output and caches. `.env.example` has empty provider values. Reviewed candidate files for credential patterns and exact nonempty local environment values; no matches found. Local frontend skills are included with the project.
+- Verification: `uv run --locked --offline python -m unittest discover -s backend/tests -q` passed all 168 tests; `npm --prefix frontend run build` passed. Sandbox Python attempts failed on cache/temp permissions; the unrestricted offline rerun passed. Existing mocked HTTP 429/503 cleanup warnings remain non-failing. No fresh browser audit or formatter check was run.
+- Product scope and next task remain unchanged: presentation-machine rehearsal. No provider calls, paid services, real trades or automatic synchronisation. Existing demo ZIP/manifest remains the October 1 snapshot and was not regenerated for this Git upload. README, tasks and change log updated to record the upload; a follow-up documentation commit records this session.
+
+## Previous checkpoint
 
 Checkpoint: 2026-10-01 · M5.3 current-interface demo package refreshed
 

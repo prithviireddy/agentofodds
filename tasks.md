@@ -1,6 +1,6 @@
 # Build Checklist — Agent of Odds
 
-Last updated: 2026-10-01
+Last updated: 2026-10-17
 
 Status: TODO / IN PROGRESS / BLOCKED / DONE. DONE requires evidence. M0–M5.3 and UI.1 are complete at their recorded proof scopes; the current-interface demo package was refreshed on October 1. Presentation-machine rehearsal remains pending.
 
@@ -28,6 +28,13 @@ Status: TODO / IN PROGRESS / BLOCKED / DONE. DONE requires evidence. M0–M5.3 a
 | M5.2 | Compare baseline, single-agent and multi-agent variants | M5.1 | DONE | Controlled offline variants, synthetic holdout isolation, self-contained replay and explicit limits; evidence below |
 | M5.3 | Prepare college demonstration | M5.2 | DONE | Fresh extraction, 168 tests, React build, five/twenty browser flows, archive replay and hash-verified evidence bundle |
 | UI.1 | Redesign the existing React frontend | M5.3 | DONE | DESIGN.md/Taste/Vercel review; all workspace states, reusable primitives, both profile browser flows and eight-width audit |
+
+## GitHub upload evidence - 2026-10-17 - DONE
+
+- User-requested initial backup: 133 project files committed and pushed to private `https://github.com/prithviireddy/agentofodds`, branch `main`, initial snapshot `1cec08cc8facd48c8cccd6c6da87178b3868b004`. `git ls-remote origin refs/heads/main` matched local HEAD after upload.
+- Existing ignore rules preserved: credentials, runtime data/books/ZIPs, installed dependencies and builds remain local. Credential-pattern and exact local-environment-value checks found no matches in the candidate files; `.env.example` provider values are empty.
+- Fresh verification: all 168 offline Python tests passed outside sandbox temp/cache restrictions; React production build passed. Non-failing mocked HTTP cleanup warnings remain. No new browser audit or formatter claim. Product milestones and pending presentation-machine rehearsal unchanged.
+- Maintenance files: README.md, handoff.md, tasks.md and changes.md. No automatic backup, provider call, added spending or trading is configured by this upload.
 
 ## Later experiments
 

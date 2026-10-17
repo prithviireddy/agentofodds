@@ -60,7 +60,7 @@ Dependency lockfiles, deterministic fixtures, correctness tests, run identities 
 
 ## Keeping your work independent of a subscription
 
-- Keep this folder and future source code in a Git repository under your control; commit small verified milestones. A local repository now exists; there is no commit or remote yet.
+- Keep this folder and future source code in a Git repository under your control; commit small verified milestones. The initial snapshot is on `main` in the private [GitHub repository](https://github.com/prithviireddy/agentofodds). Future changes require explicit commits and pushes; no automatic synchronisation is configured.
 - Maintain a separate offline backup. Download the handoff ZIP after substantial changes; a ZIP is a snapshot, not a synchronised backup.
 - Keep secrets in a local ignored environment file or secret manager, never in Markdown, fixtures, screenshots, or Git.
 - Back up database exports and permitted source snapshots separately. Git should hold small fixtures and manifests, not an unbounded archive of filings and prices.

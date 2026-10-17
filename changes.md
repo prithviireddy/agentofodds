@@ -1,10 +1,16 @@
 # Agent of Odds — Changes and Decision Log
 
-Last updated: 2026-10-01  
+Last updated: 2026-10-17  
 Current documentation version: 1.1  
 Application stage: M5.3 complete at fixture scope; separately requested UI.1 React redesign complete. Planned proof milestones remain complete.
 
-## 2026-10-01 — M5.3 current-interface demonstration refresh
+## 2026-10-17 - Initial private GitHub upload
+
+- At the user's request, created private `prithviireddy/agentofodds`, configured `origin` and pushed the initial 133-file snapshot on `main` as `1cec08cc8facd48c8cccd6c6da87178b3868b004`. Verified the remote branch SHA matches the local commit. Included source, fixtures, evidence, configuration, lockfiles, documentation and local frontend skills; retained existing exclusions for secrets, runtime data, dependencies and build output.
+- Candidate-file credential patterns and exact local environment values had no matches; `.env.example` provider values are empty. Existing Git login used without writing credentials into the project.
+- Fresh 168-test offline suite and React build passed. Python initially encountered sandbox cache/temp permission failures; the unrestricted rerun passed with existing non-failing mocked HTTP cleanup warnings. No browser/formatter rerun, application change, provider call, added spend or trade. Updated README, tasks and handoff; demo ZIP remains its recorded October 1 snapshot. Future updates require explicit commits/pushes.
+
+## 2026-10-01 - M5.3 current-interface demonstration refresh
 
 - M5.3 was already complete in the handoff; rebuilt the package to include the later React redesign. Added concise demo/report.md covering contributions, controlled M5.2 findings, historical live-access proofs and usage/cost/evidence/price/financial limits. Updated demo guide links and packaging allowlist for report, refresh record, DESIGN.md and optional design-audit.cjs; no interface or dependency change.
 - Fresh extracted cached uv/npm setup and React build passed; 168 fixture tests and all eight archived replay outcomes passed. Five/twenty Chromium smoke passed research/citations, explicit paper consent/reload, price-only valuation/replay and recovery/mobile checks. Task-owned rehearsal servers stopped. Evidence: evidence/m5_3_refresh_verification.json; final integrity receipt data/m5_3_refresh_integrity.json and current bundle inventory.
