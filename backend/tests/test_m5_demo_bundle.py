@@ -1,10 +1,11 @@
 """Distributable inventory, integrity, exclusions and path confinement."""
 from pathlib import Path
+import json
 import tempfile
 import unittest
 import zipfile
 
-from backend.app.demo_bundle import FIXED_FILES, MANIFEST, build_bundle, verify_bundle, permitted
+from backend.app.demo_bundle import DOCUMENTATION_FILES, FIXED_FILES, MANIFEST, build_bundle, verify_bundle, permitted
 
 
 class DemoBundleTests(unittest.TestCase):
@@ -12,7 +13,7 @@ class DemoBundleTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        for name in FIXED_FILES:
+        for name in (*FIXED_FILES, *DOCUMENTATION_FILES):
             path = self.root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text('permitted fixture content')
@@ -24,7 +25,8 @@ class DemoBundleTests(unittest.TestCase):
 
     def test_bundle_excludes_runtime_env_dependencies_and_is_repeatable(self):
         for name in ('.env', '.env.example', 'data/ui_runs/receipt.json', 'frontend/node_modules/index.js',
-                     'frontend/dist/index.html', 'backend/app/private.csv', 'evidence/live_cache.json'):
+                     'frontend/dist/index.html', 'backend/app/private.csv', 'evidence/live_cache.json',
+                     'docs/private-notes.md', 'docs/platform/unreviewed.md'):
             path = self.root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text('DO NOT PACKAGE')
@@ -37,6 +39,24 @@ class DemoBundleTests(unittest.TestCase):
             self.assertFalse(any(b'DO NOT PACKAGE' in archive.read(name) for name in archive.namelist()))
             self.assertIn('backend/app/example.py', archive.namelist())
             self.assertIn('backend/app/adapters/data/fixture.py', archive.namelist())
+            self.assertTrue(set(DOCUMENTATION_FILES) <= set(archive.namelist()))
+
+    def test_original_schema_v1_bundle_still_verifies_without_new_documents(self):
+        manifest = build_bundle(self.root, self.zip_path)
+        with zipfile.ZipFile(self.zip_path) as archive:
+            files = {name: archive.read(name) for name in archive.namelist()
+                     if name not in DOCUMENTATION_FILES}
+        manifest['files'] = [row for row in manifest['files'] if row['path'] not in DOCUMENTATION_FILES]
+        files[MANIFEST] = (json.dumps(manifest, indent=2) + '\n').encode()
+        with zipfile.ZipFile(self.zip_path, 'w') as archive:
+            for name, raw in files.items():
+                archive.writestr(name, raw)
+        self.assertEqual(verify_bundle(self.zip_path), manifest)
+
+    def test_new_build_requires_platform_documents(self):
+        (self.root / 'docs/platform/README.md').unlink()
+        with self.assertRaisesRegex(ValueError, 'Missing.*docs/platform/README.md'):
+            build_bundle(self.root, self.zip_path)
 
     def test_corrupt_payload_or_unlisted_secret_is_refused(self):
         for kind in ('corrupt', 'secret', 'traversal'):
@@ -66,11 +86,13 @@ class DemoBundleTests(unittest.TestCase):
 
     def test_path_policy(self):
         for name in ('../README.md', '/README.md', 'C:/README.md', 'backend\\app\\x.py',
-                     'backend/app/.private/x.py', 'data/ui_runs/receipt.py', '.env.example'):
+                     'backend/app/.private/x.py', 'data/ui_runs/receipt.py', '.env.example',
+                     'docs/private-notes.md', 'docs/platform/unreviewed.md', 'docs/../.env'):
             self.assertFalse(permitted(name), name)
         self.assertTrue(permitted('backend/app/domain/paper.py'))
         self.assertTrue(permitted('backend/app/adapters/data/fixture.py'))
         self.assertTrue(permitted('frontend/src/main.jsx'))
+        self.assertTrue(permitted('docs/platform/README.md'))
 
 
 if __name__ == '__main__':

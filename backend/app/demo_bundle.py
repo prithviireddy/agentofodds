@@ -20,6 +20,24 @@ FIXED_FILES = (
     'evidence/m5_3_verification.json', 'evidence/m5_3_refresh_verification.json',
     'demo/README.md', 'demo/walkthrough.md', 'demo/presenter_notes.md', 'demo/report.md',
 )
+# New builds include these explicit documents. Keep FIXED_FILES as the original
+# schema-v1 verification minimum so previously distributed bundles still verify.
+DOCUMENTATION_FILES = (
+    'docs/README.md',
+    'docs/platform/README.md', 'docs/platform/01-product-and-scope.md',
+    'docs/platform/02-architecture.md', 'docs/platform/03-data-and-persistence.md',
+    'docs/platform/04-research-and-workflow.md', 'docs/platform/05-allocation-and-simulation.md',
+    'docs/platform/06-interface.md', 'docs/platform/07-security-and-budget.md',
+    'docs/platform/08-evaluation-and-evidence.md',
+    'docs/adrs/README.md', 'docs/adrs/TEMPLATE.md',
+    'docs/feats/README.md', 'docs/feats/TEMPLATE.md', 'docs/feats/FEAT-0001-documentation-foundation.md',
+    'docs/runbooks/README.md', 'docs/runbooks/local-demo.md', 'docs/runbooks/verification.md',
+    'docs/deferred/README.md', 'docs/reviews/LEDGER.md', 'docs/history/README.md',
+    'docs/history/2026-10-24/readme.md', 'docs/history/2026-10-24/contributor-instructions.md',
+    'docs/history/2026-10-24/requirements.md', 'docs/history/2026-10-24/architecture.md',
+    'docs/history/2026-10-24/tasks.md', 'docs/history/2026-10-24/handoff.md',
+    'docs/history/2026-10-24/changes.md', 'docs/history/2026-10-24/demo-guide.md',
+)
 MANIFEST = 'BUNDLE_MANIFEST.json'
 MAX_BYTES = 20_000_000
 
@@ -28,7 +46,7 @@ def permitted(name):
     path = PurePosixPath(name)
     if '\\' in name or path.is_absolute() or '..' in path.parts or not name or ':' in name:
         return False
-    if name in FIXED_FILES:
+    if name in FIXED_FILES or name in DOCUMENTATION_FILES:
         return True
     if any(part.startswith('.') or part in ('__pycache__', 'node_modules', 'dist') for part in path.parts):
         return False
@@ -38,7 +56,7 @@ def permitted(name):
 
 def source_files(root):
     root = Path(root).resolve()
-    names = set(FIXED_FILES)
+    names = set(FIXED_FILES) | set(DOCUMENTATION_FILES)
     for base, suffixes in (('backend/app', ('.py',)), ('backend/tests', ('.py',)), ('frontend/src', ('.jsx', '.js', '.css'))):
         names.update(p.relative_to(root).as_posix() for p in (root / base).rglob('*') if p.is_file() and p.suffix in suffixes)
     result = {}
