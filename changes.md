@@ -7,6 +7,7 @@ Updated: 2026-10-26. This file records dated changes; [platform documentation](d
 - Committed the completed FEAT-0001 documentation and packaging changes locally on `main`, as explicitly requested by the user. Refreshed handoff to record delivery authorization and the push blocker; application behavior and dependency locks are unchanged.
 - Reviewed the diff/file inventory and passed active-file whitespace checks. October 24 tests/link/bundle checks remain the implementation evidence; no full-suite or browser rerun is claimed. Missing Git author settings were resolved using the existing repository author through command-local overrides.
 - Push blocked: after the sandbox SSH configuration failure, unrestricted SSH failed public-key authentication. The existing GitHub CLI login is valid but has no push permission on this repository (`permissions.push=false`). No remote update is claimed; an account with write access or the intended unlocked SSH identity is required. Global Git settings and remote configuration were preserved.
+- Resolved later the same day: the user unlocked the personal SSH key and authenticated as `prithviireddy`. `git push origin main` succeeded, advancing remote `main` from `7c0ff8b` to implementation commit `964c87c`. This documentation follow-up removes the current blocker from handoff/tasks while preserving the earlier failure record. No application changes or new application-test claims.
 
 ## 2026-10-24 — Documentation foundation
 

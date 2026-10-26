@@ -9,7 +9,7 @@ Updated: 2026-10-26. Status: TODO / IN PROGRESS / BLOCKED / DONE / DEFERRED. DON
 | FEAT-0001 | Consolidate platform docs, contributor rules and portable demo documentation | DONE | [Specification and completed checks](docs/feats/FEAT-0001-documentation-foundation.md): six packaging tests, checkout/extraction links, snapshot identities and verified ZIP |
 | OPS-001 | Presentation-machine rehearsal | TODO | Follow [local demo](docs/runbooks/local-demo.md) and [walkthrough](demo/walkthrough.md); record machine/setup, both profiles, approval/replay/recovery and actual presentation duration/limits |
 
-The user authorized Git commit/push delivery of FEAT-0001 on October 26; its implementation status remains DONE and changes are committed locally. Remote delivery is BLOCKED by SSH authentication and missing push permission for the current GitHub CLI account; details are in handoff.md. No other implementation task is selected. Independent financial/model-quality evaluation requires a separately agreed dataset/inference scope. The historical formatter failure remains recorded, with no frontend repair included in this documentation task.
+The user authorized Git commit/push delivery of FEAT-0001 on October 26; its implementation status remains DONE. Commit `964c87c` was pushed to `origin/main` after the user unlocked the personal SSH key; the authentication blocker is resolved. No other implementation task is selected. Independent financial/model-quality evaluation requires a separately agreed dataset/inference scope. The historical formatter failure remains recorded, with no frontend repair included in this documentation task.
 
 ## Completed foundation
 
