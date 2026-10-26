@@ -8,7 +8,7 @@ The implemented demo uses React/Vite, a Python modular monolith, a bounded check
 
 - [Platform documentation](docs/platform/README.md): current product, architecture, contracts and limits.
 - [Contributor instructions](AGENTS.md): how to work in this repository.
-- [Handoff](handoff.md) and [tasks](tasks.md): current checkpoint and next work.
+- [Handoff](docs/handoff.md) and [tasks](docs/tasks.md): current checkpoint and next work.
 - [Local demo runbook](docs/runbooks/local-demo.md): setup, replay, recovery and packaging.
 - [Presenter materials](demo/README.md): walkthrough, report and Q&A.
 - [Documentation map](docs/README.md): ownership, delivery specs, decisions, evidence and history.

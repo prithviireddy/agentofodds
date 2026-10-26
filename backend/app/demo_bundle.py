@@ -8,7 +8,7 @@ import zipfile
 from backend.app.application.demo import ROOT
 
 FIXED_FILES = (
-    'README.md', 'AGENTS.md', 'documentation.md', 'architecture.md', 'tasks.md', 'changes.md', 'handoff.md',
+    'README.md', 'AGENTS.md',
     'pyproject.toml', 'uv.lock', '.python-version', '.gitignore',
     'frontend/package.json', 'frontend/package-lock.json', 'frontend/index.html', 'frontend/style.css',
     'frontend/vite.config.js', 'frontend/smoke.cjs', 'frontend/DESIGN.md', 'frontend/design-audit.cjs',
@@ -20,10 +20,11 @@ FIXED_FILES = (
     'evidence/m5_3_verification.json', 'evidence/m5_3_refresh_verification.json',
     'demo/README.md', 'demo/walkthrough.md', 'demo/presenter_notes.md', 'demo/report.md',
 )
-# New builds include these explicit documents. Keep FIXED_FILES as the original
-# schema-v1 verification minimum so previously distributed bundles still verify.
+# Schema-v1 archives retain the same inventory/hash format. Verification accepts
+# either complete documentation layout; new builds include only the current one.
+LEGACY_DOCUMENTATION_FILES = ('documentation.md', 'architecture.md', 'tasks.md', 'changes.md', 'handoff.md')
 DOCUMENTATION_FILES = (
-    'docs/README.md',
+    'docs/README.md', 'docs/handoff.md', 'docs/tasks.md', 'docs/changes.md',
     'docs/platform/README.md', 'docs/platform/01-product-and-scope.md',
     'docs/platform/02-architecture.md', 'docs/platform/03-data-and-persistence.md',
     'docs/platform/04-research-and-workflow.md', 'docs/platform/05-allocation-and-simulation.md',
@@ -46,7 +47,7 @@ def permitted(name):
     path = PurePosixPath(name)
     if '\\' in name or path.is_absolute() or '..' in path.parts or not name or ':' in name:
         return False
-    if name in FIXED_FILES or name in DOCUMENTATION_FILES:
+    if name in FIXED_FILES or name in DOCUMENTATION_FILES or name in LEGACY_DOCUMENTATION_FILES:
         return True
     if any(part.startswith('.') or part in ('__pycache__', 'node_modules', 'dist') for part in path.parts):
         return False
@@ -118,6 +119,8 @@ def verify_bundle(path):
             raise ValueError('Manifest does not match archive inventory')
         if not set(FIXED_FILES) <= set(names):
             raise ValueError('Required demo source/evidence is missing')
+        if not (set(LEGACY_DOCUMENTATION_FILES) <= set(names) or set(DOCUMENTATION_FILES) <= set(names)):
+            raise ValueError('Required demo documentation layout is incomplete')
         for row in records:
             raw = archive.read(row['path'])
             if len(raw) != row['bytes'] or hashlib.sha256(raw).hexdigest() != row['sha256']:

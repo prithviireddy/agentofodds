@@ -1,11 +1,12 @@
 """Distributable inventory, integrity, exclusions and path confinement."""
 from pathlib import Path
+import hashlib
 import json
 import tempfile
 import unittest
 import zipfile
 
-from backend.app.demo_bundle import DOCUMENTATION_FILES, FIXED_FILES, MANIFEST, build_bundle, verify_bundle, permitted
+from backend.app.demo_bundle import DOCUMENTATION_FILES, FIXED_FILES, LEGACY_DOCUMENTATION_FILES, MANIFEST, build_bundle, verify_bundle, permitted
 
 
 class DemoBundleTests(unittest.TestCase):
@@ -26,7 +27,7 @@ class DemoBundleTests(unittest.TestCase):
     def test_bundle_excludes_runtime_env_dependencies_and_is_repeatable(self):
         for name in ('.env', '.env.example', 'data/ui_runs/receipt.json', 'frontend/node_modules/index.js',
                      'frontend/dist/index.html', 'backend/app/private.csv', 'evidence/live_cache.json',
-                     'docs/private-notes.md', 'docs/platform/unreviewed.md'):
+                     'docs/private-notes.md', 'docs/platform/unreviewed.md', *LEGACY_DOCUMENTATION_FILES):
             path = self.root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text('DO NOT PACKAGE')
@@ -41,17 +42,43 @@ class DemoBundleTests(unittest.TestCase):
             self.assertIn('backend/app/adapters/data/fixture.py', archive.namelist())
             self.assertTrue(set(DOCUMENTATION_FILES) <= set(archive.namelist()))
 
-    def test_original_schema_v1_bundle_still_verifies_without_new_documents(self):
-        manifest = build_bundle(self.root, self.zip_path)
-        with zipfile.ZipFile(self.zip_path) as archive:
-            files = {name: archive.read(name) for name in archive.namelist()
-                     if name not in DOCUMENTATION_FILES}
-        manifest['files'] = [row for row in manifest['files'] if row['path'] not in DOCUMENTATION_FILES]
+    def rewrite_inventory(self, files):
+        manifest = json.loads(files[MANIFEST])
+        manifest['files'] = [{'path': name, 'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()}
+                             for name, raw in sorted(files.items()) if name != MANIFEST]
         files[MANIFEST] = (json.dumps(manifest, indent=2) + '\n').encode()
         with zipfile.ZipFile(self.zip_path, 'w') as archive:
             for name, raw in files.items():
                 archive.writestr(name, raw)
-        self.assertEqual(verify_bundle(self.zip_path), manifest)
+        return manifest
+
+    def test_original_and_consolidated_schema_v1_bundles_still_verify(self):
+        for with_platform_docs in (False, True):
+            with self.subTest(with_platform_docs=with_platform_docs):
+                build_bundle(self.root, self.zip_path)
+                removed = {'docs/handoff.md', 'docs/tasks.md', 'docs/changes.md'} if with_platform_docs else set(DOCUMENTATION_FILES)
+                with zipfile.ZipFile(self.zip_path) as archive:
+                    files = {name: archive.read(name) for name in archive.namelist() if name not in removed}
+                files.update({name: b'Legacy documentation fixture' for name in LEGACY_DOCUMENTATION_FILES})
+                manifest = self.rewrite_inventory(files)
+                self.assertEqual(verify_bundle(self.zip_path), manifest)
+
+    def test_incomplete_document_layouts_are_refused_even_with_valid_hashes(self):
+        for kind in ('current', 'legacy', 'mixed'):
+            with self.subTest(kind=kind):
+                build_bundle(self.root, self.zip_path)
+                with zipfile.ZipFile(self.zip_path) as archive:
+                    files = {name: archive.read(name) for name in archive.namelist()}
+                if kind == 'legacy':
+                    files = {name: raw for name, raw in files.items() if name not in DOCUMENTATION_FILES}
+                    files.update({name: b'Legacy documentation fixture' for name in LEGACY_DOCUMENTATION_FILES[:-1]})
+                else:
+                    del files['docs/handoff.md']
+                    if kind == 'mixed':
+                        files['handoff.md'] = b'Legacy handoff fixture'
+                self.rewrite_inventory(files)
+                with self.assertRaisesRegex(ValueError, 'documentation layout is incomplete'):
+                    verify_bundle(self.zip_path)
 
     def test_new_build_requires_platform_documents(self):
         (self.root / 'docs/platform/README.md').unlink()

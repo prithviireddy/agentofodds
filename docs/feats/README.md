@@ -8,4 +8,4 @@ Use [TEMPLATE.md](TEMPLATE.md) and the next unused `FEAT-NNNN-short-title.md`. S
 | --- | --- | --- |
 | [FEAT-0001](FEAT-0001-documentation-foundation.md) | Consolidate repository documentation and preserve demo-package portability | Done; scoped closeout evidence recorded |
 
-Earlier M0–M5.3 and UI.1 remain historical milestone IDs in [tasks.md](../../tasks.md). Their enduring behavior is already in platform chapters; no retrospective FEATs are created. Unselected future work belongs in [deferred](../deferred/README.md).
+Earlier M0–M5.3 and UI.1 remain historical milestone IDs in [docs/tasks.md](../tasks.md). Their enduring behavior is already in platform chapters; no retrospective FEATs are created. Unselected future work belongs in [deferred](../deferred/README.md).

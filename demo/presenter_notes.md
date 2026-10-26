@@ -36,6 +36,6 @@ Python modular monolith; React/Vite frontend; local loopback JSON API; fixture/p
 
 ## Evidence boundaries
 
-Prior narrow live proofs recorded in tasks.md/changes.md include SEC facts, ten IEX daily bars, two MSFT sources and one Gemini schema/research proof. They do not establish live coverage for twenty companies or today's account entitlements. No live calls are needed or planned during this demo. The distributable includes permitted code/configuration, synthetic fixtures and recorded synthetic evidence; it excludes credentials, raw live caches and existing user/runtime books.
+Prior narrow live proofs recorded in [task history](../docs/history/2026-10-24/tasks.md) and [change history](../docs/history/2026-10-24/changes.md) include SEC facts, ten IEX daily bars, two MSFT sources and one Gemini schema/research proof. They do not establish live coverage for twenty companies or today's account entitlements. No live calls are needed or planned during this demo. The distributable includes permitted code/configuration, synthetic fixtures and recorded synthetic evidence; it excludes credentials, raw live caches and existing user/runtime books.
 
 Current evidence: regression tests; browser checks of success, evidence, approval/reload, replay and fixture failure recovery; hash-verified comparison replay; measured local scaling samples. Review the current m5_3_verification.json for exactly what was rerun. Future evaluation needs richer independent evidence, time-aware prices and predefined held-out experiments before quality or performance claims.

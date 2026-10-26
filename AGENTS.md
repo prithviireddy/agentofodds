@@ -9,9 +9,9 @@ Agent of Odds combines evidence-backed company research, constrained mathematica
 
 ## Starting work and documentation authority
 
-1. Read [handoff.md](handoff.md), then [docs/platform/README.md](docs/platform/README.md) and the chapters relevant to the task.
+1. Read [docs/handoff.md](docs/handoff.md), then [docs/platform/README.md](docs/platform/README.md) and the chapters relevant to the task.
 2. Inspect Git status, the actual source, relevant tests and the applicable delivery specification. Preserve unrelated user work.
-3. Follow the ownership and change process in the platform index. Read [tasks.md](tasks.md) for current work and [changes.md](changes.md) for recent history.
+3. Follow the ownership and change process in the platform index. Read [docs/tasks.md](docs/tasks.md) for current work and [docs/changes.md](docs/changes.md) for recent history.
 4. Distinguish agreed requirements, implemented behavior, verified results and deferred proposals. Historical notes and external examples are context, not current contracts.
 5. Work on the requested task, or the next unblocked task when asked to continue. Ask only when a missing decision materially blocks progress or the work substantially expands scope. Current user instructions govern authorization.
 
@@ -46,7 +46,7 @@ Keep this file limited to cross-task operating rules. Author durable rules once 
 ## Closeout and commits
 
 - Record changed files, checks actually run, results and limitations. Update the FEAT/task evidence before marking completion; fold enduring behavior into the owning platform chapters.
-- Update [tasks.md](tasks.md), add a dated [changes.md](changes.md) entry, and refresh [handoff.md](handoff.md) with current stage, last task, next task, blockers, tested commands, known failures and relevant commit if available.
+- Update [docs/tasks.md](docs/tasks.md), add a dated [docs/changes.md](docs/changes.md) entry, and refresh [docs/handoff.md](docs/handoff.md) with current stage, last task, next task, blockers, tested commands, known failures and relevant commit if available.
 - Use Conventional Commits: `<type>(<platform|FEAT-NNNN|ADR-NNNN>): <summary>`; for example, `docs(platform): consolidate current architecture`. Do not invent an ID for a small correction.
 - Keep review outcomes concise in [docs/reviews/LEDGER.md](docs/reviews/LEDGER.md); temporary plans and raw reviewer output are not ongoing specifications. Record reviewer identity and actual review scope without invented approval.
 - A commit, push, publication or automatic background maintenance is never implied by documentation updates. State remaining uncertainty clearly.

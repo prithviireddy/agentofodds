@@ -11,13 +11,13 @@ Start with [the platform index](platform/README.md). It defines current document
 | [deferred/](deferred/README.md) | Unimplemented options outside approved delivery; not contracts |
 | [history/](history/README.md) | Preserved earlier repository records; not current authority |
 | [reviews/](reviews/LEDGER.md) | Concise review outcomes and evidence |
-| [tasks.md](../tasks.md) / [handoff.md](../handoff.md) | Delivery index / latest operational checkpoint |
-| [changes.md](../changes.md) | Dated change history |
+| [tasks.md](tasks.md) / [handoff.md](handoff.md) | Delivery index / latest operational checkpoint |
+| [changes.md](changes.md) | Dated change history |
 | [evidence/](../evidence) | Recorded experiment and verification artifacts; each retains its original date/scope |
 | [demo/](../demo/README.md) | Presenter narrative, report and walkthrough |
 | [frontend/DESIGN.md](../frontend/DESIGN.md) | Visual tokens and design reference, applied within product behavior |
 
-The root [documentation.md](../documentation.md) and [architecture.md](../architecture.md) remain navigation pointers for existing readers. Do not maintain parallel specifications there.
+Only README.md and AGENTS.md remain as root Markdown discovery files. Current handoff, tasks and changes live here in `docs/`. The old root `documentation.md` and `architecture.md` pointers have been removed: use [product and scope](platform/01-product-and-scope.md) and [architecture](platform/02-architecture.md). Original substantive records remain in history; do not recreate parallel root specifications.
 
 ## Existing document disposition
 

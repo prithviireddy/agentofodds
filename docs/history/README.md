@@ -10,9 +10,9 @@ The 2026-10-24 snapshot contains the exact pre-consolidation bytes from commit `
 | `AGENTS.md` | [contributor-instructions.md](2026-10-24/contributor-instructions.md) | Root contributor rules |
 | `documentation.md` | [requirements.md](2026-10-24/requirements.md) | Platform chapters; unimplemented options in deferred |
 | `architecture.md` | [architecture.md](2026-10-24/architecture.md) | Platform module/data/workflow/API contracts |
-| `tasks.md` | [tasks.md](2026-10-24/tasks.md) | Root delivery index plus FEAT acceptance |
-| `handoff.md` | [handoff.md](2026-10-24/handoff.md) | Root latest checkpoint |
-| `changes.md` | [changes.md](2026-10-24/changes.md) | Root dated change log; ADRs for new architectural decisions |
+| `tasks.md` | [tasks.md](2026-10-24/tasks.md) | [docs/tasks.md](../tasks.md) plus FEAT acceptance |
+| `handoff.md` | [handoff.md](2026-10-24/handoff.md) | [docs/handoff.md](../handoff.md), latest checkpoint |
+| `changes.md` | [changes.md](2026-10-24/changes.md) | [docs/changes.md](../changes.md); ADRs for new architectural decisions |
 | `demo/README.md` | [demo-guide.md](2026-10-24/demo-guide.md) | Demo entry point and local runbook |
 
 Snapshots include stale dates/status, historical machine paths, old provider failures/prices and superseded proposals. Preservation is not endorsement. New corrections belong to active documents and a dated change entry; do not silently rewrite historical test outcomes.

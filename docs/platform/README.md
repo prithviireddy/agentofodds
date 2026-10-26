@@ -28,7 +28,7 @@ Use these labels precisely:
 
 No unimplemented target delivery is silently introduced by this consolidation. The pending presentation rehearsal is an operational task. Broader evaluation and infrastructure options need separate scope agreement.
 
-`docs/adrs/` owns new decision rationale, `docs/feats/` owns delivery scope, and `docs/runbooks/` owns procedures. Completed features fold enduring behavior back into these chapters. `tasks.md` indexes work, `handoff.md` holds the latest checkpoint, and `changes.md` records history. Neither history nor deferred material can override active contracts. [AGENTS.md](../../AGENTS.md) owns contributor operating rules; [frontend/DESIGN.md](../../frontend/DESIGN.md) owns visual tokens.
+`docs/adrs/` owns new decision rationale, `docs/feats/` owns delivery scope, and `docs/runbooks/` owns procedures. Completed features fold enduring behavior back into these chapters. [docs/tasks.md](../tasks.md) indexes work, [docs/handoff.md](../handoff.md) holds the latest checkpoint, and [docs/changes.md](../changes.md) records history. Neither history nor deferred material can override active contracts. [AGENTS.md](../../AGENTS.md) owns contributor operating rules; [frontend/DESIGN.md](../../frontend/DESIGN.md) owns visual tokens.
 
 ## Change process
 

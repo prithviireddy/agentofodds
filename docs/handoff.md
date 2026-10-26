@@ -1,5 +1,15 @@
 # Handoff — Agent of Odds
 
+## Current checkpoint: documentation relocation, 2026-10-26
+
+The user requested moving the remaining old root documents into `docs/`. Last completed task: DOCS-001. Handoff/tasks/changes now live here; architecture/requirements already belong to platform chapters, and their redundant root pointers are removed. README.md and AGENTS.md remain at the root. The original eight-file history snapshot is unchanged. Base commit: `069828f`; the worktree was clean when this follow-up began.
+
+Verification passed: seven packaging tests in checkout and extraction; 30 active Markdown files/193 links and anchors; eight byte-identical history snapshots; previously built legacy ZIP acceptance; new 140-payload ZIP with all 32 docs and no old root files; source hashes and whitespace checks. Commands: `uv run --locked --offline python -m unittest backend.tests.test_m5_demo_bundle -v`, `uv run --locked --offline python /tmp/agentofodds-doc-relocation-check.py`, and `git diff --check`. The new temporary ZIP is `/tmp/agentofodds-doc-relocation.zip`; historical evidence remains unchanged. Author review only, no new known failure.
+
+This follow-up changes documentation paths and packaging only. At implementation closeout it was uncommitted; the user subsequently requested committing and pushing DOCS-001 to `origin/main`. The delivery commit is identified in Git history, and remote equality is checked after push. No domain/UI/fixture/dependency change, full-suite/browser rerun or live call is introduced by this Git delivery. No implementation blocker remains for DOCS-001; the next operational task is OPS-001 presentation-machine rehearsal. Prior implementation/delivery context and known product limitations follow below with their original dates.
+
+## Previous checkpoint: Git delivery
+
 Checkpoint: 2026-10-26, user-authorized Git delivery of FEAT-0001. Branch: `main`; implementation base commit `7c0ff8b` (`docs: record GitHub upload and verification`). The worktree was clean before the October 24 implementation. Work from the current checkout, not the historical Windows path.
 
 The user requested committing and pushing the completed changes to `origin/main`. Implementation commit `964c87c` was pushed successfully after the user unlocked the personal SSH key and verified authentication as `prithviireddy`. The earlier public-key failure and the alternate GitHub CLI account's missing write permission no longer block delivery through SSH. Git author settings were absent, so commits use the identity from existing repository commits through command-local overrides; no global configuration was changed. This follow-up records the resolved delivery status.
@@ -10,7 +20,7 @@ Delivery review confirms the documentation and packaging scope; the six-test and
 
 M0–M5.3 and UI.1 remain complete at recorded proof/fixture scopes. The product is a local React/Vite workspace with Python research/selection/allocation, bounded checkpointed review, explicit paper approval, exact ledger and manual valuation replay. Full flows are synthetic. Independent financial/model-quality evaluation and production/live automation remain unimplemented.
 
-Last completed task: [FEAT-0001](docs/feats/FEAT-0001-documentation-foundation.md), documentation consolidation and demo-package portability. Platform authority is now [docs/platform/README.md](docs/platform/README.md). Earlier root records and the demo setup guide are preserved through [history](docs/history/README.md). Root documentation/architecture are pointers; AGENTS contains cross-task rules only.
+The preceding completed task was [FEAT-0001](feats/FEAT-0001-documentation-foundation.md), documentation consolidation and demo-package portability. Platform authority is [docs/platform/README.md](platform/README.md). Earlier root records and the demo setup guide are preserved through [history](history/README.md). The later DOCS-001 follow-up removes the temporary root documentation/architecture pointers; AGENTS contains cross-task rules only.
 
 ## Last completed work and current verification
 
@@ -22,7 +32,7 @@ Environment: Linux, uv 0.12.23, Python 3.14.4. `uv sync --locked --offline` firs
 
 ## Next work and limits
 
-Next: OPS-001 presentation-machine rehearsal using [the local runbook](docs/runbooks/local-demo.md) and [presenter walkthrough](demo/walkthrough.md). No implementation blocker remains for FEAT-0001, and no new implementation milestone or paid inference is selected.
+Next: OPS-001 presentation-machine rehearsal using [the local runbook](runbooks/local-demo.md) and [presenter walkthrough](../demo/walkthrough.md). No implementation blocker remains for FEAT-0001, and no new implementation milestone or paid inference is selected.
 
 Known historical issue: October 1 `npm --prefix frontend run check` failed on existing `src/main.jsx` formatting. October 17 full Python tests/build passed, without a formatter/browser rerun. Broader browser/accessibility and cache-free presentation setup remain unverified. No actual user investment policy is configured.
 
